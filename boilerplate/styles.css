@@ -1,0 +1,18 @@
+/* *** GENERAL *** */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-background: rgb(32,33,36);
+    --color-text: rgb(232,234,237);
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
