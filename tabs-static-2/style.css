@@ -19,22 +19,21 @@ body{
 
 .container{
     margin: 10px 10px;
-    border: 1px solid var(--color-text);
 }
 
 /* *** NAVBAR *** */
 
 /* <nav> is a flexbox so you can quickly adjust the layout of the items */ 
 nav{
-    background-color: darkslategray;
     display: flex;
-    border-bottom: 1px solid var(--color-text);
 }
-/* Note for nav and main sharing the same color like in tabs-static-2 :  delete the border-bottom */
 
 .item-tab{
     width: 100px;
+    border-radius: 10px 10px 0 0;
+    background-color: darkslategray;
     padding: 10px 10px;
+    margin-right: 2px;
     text-align: center;
     cursor: pointer;
 }
@@ -52,14 +51,9 @@ nav{
 
 /* *** CONTENT *** */
 
-/* Note for nav and main sharing the same color like in tabs-static-2 :  
-add the following by choosing the .item-tab-selected background-color :
-
 main{
     background-color: darkcyan;
 }
-
-*/
 
 article{
     padding: 10px;
