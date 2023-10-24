@@ -39,13 +39,18 @@ nav{
 }
 
 /* Fix for mobile devices : https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover */
-@media (hover :hover){
+@media (hover: hover){
     .item-tab:hover{
         background-color: cadetblue;
     }
 }
 
 .item-tab-selected{
+    background-color: darkcyan;
+}
+
+/* Override the default hover color so it looks like there's no hovering effect on selected tab */
+.item-tab.item-tab-selected:hover {
     background-color: darkcyan;
 }
 

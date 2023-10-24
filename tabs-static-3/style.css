@@ -9,6 +9,10 @@
 :root{
     --color-background: rgb(32,33,36);
     --color-text: rgb(232,234,237);
+    --color-unselectedTab: dimgray;
+    --color-itemColor1: lightcoral;
+    --color-itemColor2: mediumseagreen;
+    --color-itemColor3: steelblue;  
 }
 
 body{
@@ -19,16 +23,13 @@ body{
 
 .container{
     margin: 10px 10px;
-    border: 1px solid var(--color-text);
 }
 
 /* *** NAVBAR *** */
 
 /* <nav> is a flexbox so you can quickly adjust the layout of the items */ 
 nav{
-    background-color: darkslategray;
     display: flex;
-    border-bottom: 1px solid var(--color-text);
 }
 
 .item-tab{
@@ -38,20 +39,15 @@ nav{
     cursor: pointer;
 }
 
+.item-tab-unselected{
+    background-color: var(--color-unselectedTab);
+}
+
 /* Fix for mobile devices : https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover */
 @media (hover: hover){
     .item-tab:hover{
-        background-color: cadetblue;
+        background-color: gray;
     }
-}
-
-.item-tab-selected{
-    background-color: darkcyan;
-}
-
-/* Override the default hover color so it looks like there's no hovering effect on selected tab */
-.item-tab.item-tab-selected:hover {
-    background-color: darkcyan;
 }
 
 /* *** CONTENT *** */
