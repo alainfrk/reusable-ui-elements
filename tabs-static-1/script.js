@@ -8,7 +8,6 @@ function showPanelAndSelectTab(panelId, tabId){
     });
     panelId.style.display = 'block';
 
-    // Note : background-color could be defined here but I prefer to keep it in the CSS file
     const itemTabs = document.querySelectorAll('.item-tab');
     itemTabs.forEach(element => {
         element.classList.remove('item-tab-selected')

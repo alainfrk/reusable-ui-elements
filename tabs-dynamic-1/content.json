@@ -1,0 +1,22 @@
+{
+    "items" : [
+        {
+            "name" : "item1",
+            "tab" : "Item 1",
+            "title" : "Item 1 Title",
+            "article" : "Content of item 1 : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, voluptatem. Suscipit incidunt minima placeat quos pariatur ratione quod, assumenda nisi."
+        },
+                {
+            "name" : "item2",
+            "tab" : "Item 2",
+            "title" : "Item 2 Title",
+            "article" : "Content of item 2 : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, voluptatem. Suscipit incidunt minima placeat quos pariatur ratione quod, assumenda nisi."
+        },
+                {
+            "name" : "item3",
+            "tab" : "Item 3",
+            "title" : "Item 3 Title",
+            "article" : "Content of item 3 : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, voluptatem. Suscipit incidunt minima placeat quos pariatur ratione quod, assumenda nisi."
+        }
+    ]
+}
