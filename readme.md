@@ -6,7 +6,7 @@ They're desktop-first so it's up to you to implement responsiveness.
 
 **Current status :** work in progress
 
-**Important :** Due to the CORS policy, elements relying on dynamic content may not load data correctly when accessed via the "file://" protocol. To run dynamic elements locally, you need a local server. An option is to use the "Live Server" extension in Visual Studio Code.
+**Note :** Due to the CORS policy, elements relying on dynamic content may not load data correctly when accessed via the "file://" protocol. To run dynamic elements locally, you need a local server. An option is to use the "Live Server" extension in Visual Studio Code.
 
 | Folder/Element | Description |
 |----------------|-------------|

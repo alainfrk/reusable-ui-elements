@@ -1,6 +1,31 @@
-/* *** LOGIC FOR TABS BASED ON STATIC CONTENT ****/
+/* *** INDEX OF THE CURRENT SCRIPT ***
 
-// FUNCTION : Hide all panels then show the chosen one, deselect all tabs and select chosen one
+    1. function assignEventListenersAndColors()
+        => Assigning EventListeners to Tabs and choosing color.
+
+    2. function showPanelAndSelectTab(panelId, tabId)
+        => Hide all panels then show the chosen one, deselect all tabs and select chosen one
+
+    3. DOMContentLoaded
+        => on page load : add eventListeners and start with the first item
+
+*/
+
+// FUNCTION : assignEventListenersAndColors
+// Note : as the layout is static, you know how many items will be shown in the DOM
+function assignEventListenersAndColors(){
+    const totalItemsInDOM = 3;
+
+    for(let i = 1; i <= totalItemsInDOM; i++){
+        const targetedPanel = document.getElementById(`item-panel-${i}`);
+        const targetedTab = document.getElementById(`item-tab-${i}`);
+        const targetedColor = `itemColor${i}`;
+
+        targetedTab.addEventListener('click', () => showPanelAndSelectTab(targetedPanel, targetedTab, targetedColor));
+    }
+}
+
+// FUNCTION : showPanelAndSelectTab
 function showPanelAndSelectTab(panelId, tabId, itemColor){
 
     // Reminder: style settings through JS count as inline-style so they have higher priority than CSS
@@ -20,18 +45,12 @@ function showPanelAndSelectTab(panelId, tabId, itemColor){
    
 }
 
-let itemPanel1 = document.getElementById('item-panel-1');
-let itemPanel2 = document.getElementById('item-panel-2');
-let itemPanel3 = document.getElementById('item-panel-3');
+// DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    assignEventListenersAndColors();
 
-let itemTab1 = document.getElementById('item-tab-1');
-itemTab1.addEventListener('click', () => showPanelAndSelectTab(itemPanel1, itemTab1, 'itemColor1'));
-
-let itemTab2 = document.getElementById('item-tab-2');
-itemTab2.addEventListener('click', () => showPanelAndSelectTab(itemPanel2, itemTab2, 'itemColor2'));
-
-let itemTab3 = document.getElementById('item-tab-3');
-itemTab3.addEventListener('click', () => showPanelAndSelectTab(itemPanel3, itemTab3, 'itemColor3'));
-
-// Show panel 1 by default on page load
-showPanelAndSelectTab(itemPanel1, itemTab1, 'itemColor1')
+    // Show item 1 by default on page load
+    const itemPanel1 = document.getElementById('item-panel-1');
+    const itemTab1 = document.getElementById('item-tab-1');
+    showPanelAndSelectTab(itemPanel1, itemTab1, 'itemColor1');
+})

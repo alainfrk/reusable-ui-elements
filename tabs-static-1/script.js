@@ -1,32 +1,51 @@
-/* *** LOGIC FOR TABS BASED ON STATIC CONTENT ****/
+/* *** INDEX OF THE CURRENT SCRIPT ***
 
-// FUNCTION : Hide all panels then show the chosen one, deselect all tabs and select chosen one
-function showPanelAndSelectTab(panelId, tabId){
-    const itemPanels = document.querySelectorAll('.item-panel');
+    1. function assignPanelsAndTabsAndEventListeners()
+        => Assigning EventListeners to Tabs
+
+    2. function showPanelAndSelectTab(panelId, tabId)
+        => Hide all panels then show the chosen one, deselect all tabs and select chosen one
+
+    3. DOMContentLoaded
+        => on page load : add eventListeners and start with the first item
+
+*/
+
+// FUNCTION : assignPanelsAndTabsAndEventListeners
+// Note : as the layout is static, you know how many items will be shown in the DOM
+function assignPanelsAndTabsAndEventListeners(){
+    const totalItemsInDOM = 3;
+
+    for(let i = 1; i <= totalItemsInDOM; i++){
+        const targetedPanel = document.getElementById(`item-panel-${i}`);
+        const targetedTab = document.getElementById(`item-tab-${i}`);
+
+        targetedTab.addEventListener('click', () => showPanelAndSelectTab(targetedPanel, targetedTab));
+    }
+}
+
+// FUNCTION : showPanelAndSelectTab
+const itemPanels = document.querySelectorAll('.item-panel');
+const itemTabs = document.querySelectorAll('.item-tab');
+
+function showPanelAndSelectTab(panelId, tabId){ 
     itemPanels.forEach(element => {
         element.style.display = 'none';
     });
     panelId.style.display = 'block';
-
-    const itemTabs = document.querySelectorAll('.item-tab');
+    
     itemTabs.forEach(element => {
         element.classList.remove('item-tab-selected')
     });
     tabId.classList.add('item-tab-selected');
 }
 
-let itemPanel1 = document.getElementById('item-panel-1');
-let itemPanel2 = document.getElementById('item-panel-2');
-let itemPanel3 = document.getElementById('item-panel-3');
+// DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    assignPanelsAndTabsAndEventListeners();
 
-let itemTab1 = document.getElementById('item-tab-1');
-itemTab1.addEventListener('click', () => showPanelAndSelectTab(itemPanel1, itemTab1));
-
-let itemTab2 = document.getElementById('item-tab-2');
-itemTab2.addEventListener('click', () => showPanelAndSelectTab(itemPanel2, itemTab2));
-
-let itemTab3 = document.getElementById('item-tab-3');
-itemTab3.addEventListener('click', () => showPanelAndSelectTab(itemPanel3, itemTab3));
-
-// Show panel 1 by default on page load
-showPanelAndSelectTab(itemPanel1, itemTab1)
+    // Show item 1 by default on page load
+    const itemPanel1 = document.getElementById('item-panel-1');
+    const itemTab1 = document.getElementById('item-tab-1');
+    showPanelAndSelectTab(itemPanel1, itemTab1);
+})
