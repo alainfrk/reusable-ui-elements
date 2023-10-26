@@ -3,14 +3,15 @@
     1. function createTabsAndPanels (items)
         => Create Tabs and Panels from fetched data
 
-    2. function assignPanelsAndTabsAndEventListeners()
+    2. function assignPanelsAndTabsAndEventListeners(numberOfItems)
         => Assigning EventListeners to Tabs
 
     3. function showPanelAndSelectTab(panelId, tabId)
         => Hide all panels then show the chosen one, deselect all tabs and select chosen one
 
     4. DOMContentLoaded
-        => Fetching the data on page load, fill texts, add eventListeners and start with the first item
+        => Fetching the data on page load, create tabs and panels with corresponding text, 
+        add eventListeners and start with the first item
 
 */
 
