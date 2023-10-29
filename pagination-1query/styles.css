@@ -1,0 +1,60 @@
+/* *** GENERAL *** */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background: rgb(32, 33, 36);
+  --color-text: rgb(232, 234, 237);
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* *** HTML ELEMENTS *** */
+
+.container {
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+#page-infos {
+  margin-bottom: 1rem;
+}
+
+#listing {
+  margin-bottom: 1rem;
+}
+
+#buttons-page-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--color-text);
+  cursor: pointer;
+}
+
+#buttons-page-nav > button:last-child {
+  margin-right: 0;
+}
+
+@media (hover: hover) {
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
