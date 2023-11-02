@@ -1,0 +1,119 @@
+/* *** GENERAL *** */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background: rgb(32, 33, 36);
+  --color-text: rgb(232, 234, 237);
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* *** SLIDES *** */
+
+.container-slides {
+  border: 2px solid var(--color-text);
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 5vh auto;
+  width: 800px;
+  height: auto;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+}
+
+.slide-text {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.slide img {
+  width: 100%;
+  /* inline-block by default can cause issues */
+  display: block;
+}
+
+/* *** SLIDES ANIMATION *** */
+
+.fade-in {
+  animation: fade-in 1.2s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* *** BUTTONS *** */
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-nav {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--color-text);
+  font-size: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-previous {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 0 5px 5px 0;
+}
+
+.btn-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px 0 0 5px;
+}
+
+.btn-round-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 12rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-round {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-round.highlighted {
+  background-color: var(--color-text);
+}
