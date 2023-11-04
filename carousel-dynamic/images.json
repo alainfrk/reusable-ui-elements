@@ -1,0 +1,52 @@
+[
+  {
+    "hexValue": "#DEB887",
+    "colorName": "burlywood",
+    "imageURL": "../img/html-color-burlywood.png"
+  },
+  {
+    "hexValue": "#E9967A",
+    "colorName": "darksalmon",
+    "imageURL": "../img/html-color-darksalmon.png"
+  },
+  {
+    "hexValue": "#8FBC8F",
+    "colorName": "darkseagreen",
+    "imageURL": "../img/html-color-darkseagreen.png"
+  },
+  {
+    "hexValue": "#00BFFF",
+    "colorName": "deepSkyblue",
+    "imageURL": "../img/html-color-deepskyblue.png"
+  },
+  {
+    "hexValue": "#CD5C5C",
+    "colorName": "indianred",
+    "imageURL": "../img/html-color-indianred.png"
+  },
+  {
+    "hexValue": "#E6E6FA",
+    "colorName": "lavender",
+    "imageURL": "../img/html-color-lavender.png"
+  },
+  {
+    "hexValue": "#ADD8E6",
+    "colorName": "lightblue",
+    "imageURL": "../img/html-color-lightblue.png"
+  },
+  {
+    "hexValue": "#48D1CC",
+    "colorName": "mediumturquoise",
+    "imageURL": "../img/html-color-mediumturquoise.png"
+  },
+  {
+    "hexValue": "#FFDAB9",
+    "colorName": "peachpuff",
+    "imageURL": "../img/html-color-peachpuff.png"
+  },
+  {
+    "hexValue": "#D8BFD8",
+    "colorName": "thistle",
+    "imageURL": "../img/html-color-thistle.png"
+  }
+]

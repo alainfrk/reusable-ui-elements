@@ -1,16 +1,15 @@
 # Reusable UI Elements
 
-My collection of simple UI Elements to reuse, restyle, animate and add functionalities in other projects.
+Some simple UI Elements to reuse and build upon in other projects.
 
 They're desktop-first so it's up to you to implement responsiveness.
 
-**Current status :** work in progress
-
-**Note :** Due to the CORS policy, elements relying on dynamic content may not load data correctly when accessed via the "file://" protocol. To run dynamic elements locally, you need a local server. An option is to use the "Live Server" extension in Visual Studio Code.
+**Note :** Due to the CORS policy, elements relying on dynamic content may not load data correctly when accessed via the "file://" protocol. To run dynamic elements locally, you need a local server. An option is to use the "Live Server" extension in Visual Studio Code. Also, don't forget to sanitize fetched data.
 
 | Folder/Element    | Description                                              |
 | ----------------- | -------------------------------------------------------- |
 | boilerplate       | Initial files: HTML, CSS, and JS                         |
+| carousel-dynamic  | Carousel of slides based on dynamic content              |
 | carousel-static   | Carousel of slides based on static content               |
 | img               | Shared placeholder images                                |
 | pagination-1query | Pagination based on data fetched only once               |
